@@ -87,11 +87,7 @@ impl PreTokenizedString {
                     .into_iter()
                     .filter_map(|split| {
                         let split: Split = split.into();
-                        if split.normalized.is_empty() {
-                            None
-                        } else {
-                            Some(split)
-                        }
+                        split.normalized.is_empty().then_some(split)
                     }),
             );
         }
