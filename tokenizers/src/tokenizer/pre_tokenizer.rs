@@ -63,7 +63,7 @@ impl PreTokenizedString {
     /// over the produced `NormalizedString`. `split_fn` is free of modifying these
     /// `NormalizedString` as relevant, as long as it respects the constraint stated below.
     ///
-    /// There are only one constraint that *MUST* be respected:
+    /// There is only one constraint that *MUST* be respected:
     /// > The produced `NormalizedString`, if combined back together, must have the
     /// same `original` string as the original one given to `split_fn`. This concretely
     /// means that for the offset tracking to work as expected, `split_fn` must produce
